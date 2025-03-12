@@ -1,4 +1,4 @@
-# anti-affiliate-redirect
+# anti-clickbait-url
 
 ![image](https://github.com/user-attachments/assets/8df95e32-99b3-4e2f-9a89-fda5d3acb7cf)
 
