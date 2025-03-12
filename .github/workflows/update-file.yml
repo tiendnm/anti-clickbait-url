@@ -5,7 +5,7 @@ on:
     paths:
       - 'blocklist.txt' # Khi blocklist.txt thay đổi, chạy workflow
     branches:
-      - development
+      - main
 
 jobs:
   update-file:
