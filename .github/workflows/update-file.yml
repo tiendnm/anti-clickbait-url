@@ -1,0 +1,29 @@
+name: Update blocklist-abp-style Based on blocklist
+
+on:
+  push:
+    paths:
+      - 'blocklist.txt' # Khi blocklist.txt thay đổi, chạy workflow
+    branches:
+      - development
+
+jobs:
+  update-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} # Dùng token để push thay đổi
+
+      - name: Modify blocklist-abp-style.txt
+        run: |
+          awk '{print "||" $0 "^"}' blocklist.txt > blocklist-abp-style.txt
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add blocklist-abp-style.txt
+          git commit -m "Auto update blocklist-abp-style.txt based on blocklist.txt" || echo "Không có thay đổi nào"
+          git push
