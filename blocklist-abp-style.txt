@@ -10,4 +10,3 @@
 ||l-id.pro^
 ||0fb.info^
 ||faceb.me^
-||example.com^
