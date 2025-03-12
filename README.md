@@ -16,3 +16,4 @@ Danh sách sẽ được cập nhật thường xuyên để bổ sung các doma
 
 📌 Đóng góp & báo cáo link mới: Nếu bạn phát hiện thêm các link dạng này, hãy mở issue hoặc gửi pull request!
 
+Bạn nào dùng pihole, adblock, adguard,... thì dùng file `blocklist-abp-style.txt` nha
